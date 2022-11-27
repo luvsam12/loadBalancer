@@ -12,6 +12,14 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    console.log('Application server 2');
-    res.send('Rsponse from app server 2')
+    setTimeout(() => {
+        console.log('Application server 2');
+        res.send('Rsponse from app server 2')
+    }, 5000);
 });
+
+// app.get('/shutDown', (req, res) => {
+//     console.log('Application server 2 is shutting down');
+//     res.send('Application server 2 is shutting down');
+//     process.exit(0);
+// });
